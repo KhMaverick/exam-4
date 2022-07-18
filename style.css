@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+section{
+    background-color: rgb(202, 205, 206);
+}
+#round{
+    border-radius: 30px;
+}
+#mcard{
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+}
+#heart{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
