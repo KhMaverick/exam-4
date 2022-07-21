@@ -2,8 +2,6 @@ let data = [];
 let data2 = [];
 let data3 = [];
 
-
-
 function getting() {
     $.ajax({
         url: "https://myjson.dit.upm.es/api/bins/6ui7",
@@ -97,38 +95,39 @@ let Korzina =[];
 
 function Basket(index) {
     Korzina.push({
-        name: data[index].name
+        "name": data[index].name
     })
-    console.log(index.name);
 }
 function Basket2(index) {
     Korzina.push({
-        name: data2[index].name
+        "name": data2[index].name
     })
 }
 function Basket3(index) {
     Korzina.push({
-        name: data3[index].name
+        "name": data3[index].name
     })
 }
 
 function AddKorzina(){
     Korzina.map((val,ind)=>{
-        let k = `
-    <div>
+        let sum = `
         <div class="row">
             <div class="col-12">
-                <div class="card text-center">
+                <div class="card text-center px-5 py-2 m-3">
                     <h4>${val.name}</h4>
+                    <button class="btn btn-primary mx-5">Buy</button>
                 </div>
             </div>
         </div>
-    </div>
     `
-    $("#korzinka").append(k)
+
+    console.log(Korzina);
+    $("#occult").append(sum);
     })
 }
-AddKorzina()
+// AddKorzina()
+
 
 $("#Search").on("input", ()=>{
     let searching = data.filter(item=>{
